@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* reset 시작 */
+
+* {
+  color: #333;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a:link {
+  color: #666;
+}
+
+a:visited {
+  color: #444;
+}
+
+a:hover {
+  color: #555;
+}
+
+a:active {
+  color: #666;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+/* reset 끝*/
+/* div#wrap */
+
+div#wrap {
+  border: 1px solid #000;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* div#wrap */
+
+/* header#header */
+
+header#header {
+  height: 100px;
+  /* border: 1px solid #000; */
+  justify-content: space-between;
+}
+
+#header #headerlogo {
+  height: 100px;
+  line-height: 100px;
+  /* border: 1px solid #000; */
+}
+
+/* nav#gnb */
+
+#header #gnb {
+  /* border: 1px solid #000; */
+  margin-right: 20px;
+
+  width: 62 0px;
+}
+
+#header #gnb ul#mainMenu {
+  height: 100px;
+  /* border: 1px solid #f80; */
+
+  align-items: center;
+}
+
+#header #gnb a {
+  font-size: 17px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+
+  /* border: 1px solid #aaa; */
+
+  display: inline-block;
+}
+
+#header .mainLi:hover > a,
+#header .subLi > a:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: #c9adb1;
+}
+
+#header #gnb ul.subMenu {
+  background-color: #fff;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+/* nav#gnb */
+
+/* header#header */
+/* div#slide */
+
+div#slide {
+  height: 300px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+#slide a {
+  width: 1200px;
+  height: 300px;
+  display: inline-block;
+
+  position: relative;
+}
+
+#slide span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #b16873;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 2px solid #ddd;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* div#slide */
+/* div#contents */
+
+div#contents {
+  height: 200px;
+  border: 1px solid #000;
+}
+
+/* div#contents */
+/* footer#footer */
+
+footer#footer {
+  height: 100px;
+  border: 1px solid #000;
+}
+
+/* footer#footer */
