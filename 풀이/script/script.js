@@ -26,4 +26,17 @@ $(function(){
     );
 }
     // SlideShow 끝
+
+    // MultiTap 시작
+        // 탭버튼
+    $("#bbs button").click(function(){
+        $("#bbs button").removeClass("selected");
+        $(this).addClass("selected");
+        // 탭 콘텐츠
+        var dataLink = $(this).attr("data-link");
+        $("#bbs .tabContents").css({"display":"none"});
+        $("#" + dataLink).css({"display":"block"});
+    });
+        
+    // MultiTap 끝
 });
