@@ -42,11 +42,22 @@ a:active {
   display: flex;
 }
 
+/* IE 구버전에서 동일한 출력효과 구현 */
+header,
+nav,
+main,
+footer,
+section,
+article,
+aside {
+  display: block;
+}
+
 /* reset 끝*/
 /* div#wrap */
 
 div#wrap {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 1200px;
   margin: 0 auto;
 }
@@ -73,7 +84,7 @@ header#header {
   /* border: 1px solid #000; */
   margin-right: 20px;
 
-  width: 62 0px;
+  width: 620px;
 }
 
 #header #gnb ul#mainMenu {
@@ -116,7 +127,7 @@ header#header {
 
 div#slide {
   height: 300px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   overflow: hidden;
 }
 
@@ -149,15 +160,17 @@ div#slide {
 
 div#contents {
   height: 200px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 #contents > div {
   padding: 4px;
   margin: 4px;
   flex: 1;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
+
+/* div#bbs 시작 */
 
 #contents #bbs button {
   font-size: 18px;
@@ -189,13 +202,12 @@ div#contents {
   /* border: 1px solid #f80; */
 }
 
-#contents #bbs table td {
-  /* line-height: 30px; */
-  /* border: 1px solid #88f; */
-}
+/* #contents #bbs div#bbsNotice {
+  display: none;
+} */
 
-#contents #bbs div#bbsNotice {
-  /* display: none; */
+#contents #bbs div#bbsNotice td {
+  padding-left: 6px;
 }
 
 #contents #bbs div#bbsGallery {
@@ -204,20 +216,94 @@ div#contents {
   text-align: center;
 }
 
-/* #contents #bbsGallery #td {
+/* div#bbs 끝*/
+/* div#banner, div#shortcut 시작 */
+
+div#banner,
+div#shortcut {
   text-align: center;
-} */
+}
+
+/* div#banner, div#shortcut 끝 */
 
 /* div#contents */
 /* footer#footer */
 
 footer#footer {
   height: 100px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+}
+
+#footer > div {
+  /* border: 1px solid #000; */
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+#footer div#footerLogo,
+#footer div#snsArea {
+  width: 200px;
+}
+
+#footer div#copyright {
+  flex: 1;
+  font-size: 14px;
 }
 
 /* footer#footer */
 
+/* 레이어팝업 시작 */
+tr#popupPoint {
+  cursor: pointer;
+}
+
 #layerBG {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+
+  position: absolute;
+  left: 0;
+  top: 0;
   display: none;
 }
+
+#layerPopup {
+  padding: 20px 60px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  background-color: #fff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#layerBG h1 {
+  margin: 15px;
+}
+
+#layerBG p {
+  margin-top: 15px;
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+#closeBtnArea {
+  margin: 20px 20px 0;
+  text-align: right;
+}
+
+#layerBG button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px 20px;
+
+  background-color: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* 레이어팝업 끝 */

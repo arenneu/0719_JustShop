@@ -39,4 +39,15 @@ $(function(){
     });
         
     // MultiTap 끝
+
+    // 레이어 팝업 시작
+    $("tr#popupPoint").click(function(){
+        $("div#layerBG").css({"display":"block"});
+    });
+
+    $("#closeBtnArea>button").click(function(){
+        $("div#layerBG").css({"display":"none"});
+    });
+    // 레이어 팝업 끝
+
 });
